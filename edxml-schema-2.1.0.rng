@@ -350,21 +350,14 @@
                 </data>
               </attribute>
             </optional>
-            <oneOrMore>
-              <element name="object">
-                <attribute name="property">
-                  <data type="token">
-                    <param name="maxLength">64</param>
-                    <param name="pattern">[a-z0-9-]*</param>
-                  </data>
-                </attribute>
-                <attribute name="value">
-                  <data type="string">
-                    <param name="minLength">1</param>
-                  </data>
-                </attribute>
-              </element>
-            </oneOrMore>
+            <element name="properties">
+              <oneOrMore>
+                <element>
+                  <anyName/>
+                  <text/>
+                </element>
+              </oneOrMore>
+            </element>
             <optional>
               <element name="content">
                 <text/>
