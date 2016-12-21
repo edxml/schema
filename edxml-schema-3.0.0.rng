@@ -20,6 +20,103 @@
 
 <element name="events" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <element name="definitions">
+    <element name="objecttypes">
+      <zeroOrMore>
+        <element name="objecttype">
+          <attribute name="data-type">
+            <choice>
+              <value type="string">number:tinyint</value>
+              <value type="string">number:tinyint:signed</value>
+              <value type="string">number:smallint</value>
+              <value type="string">number:smallint:signed</value>
+              <value type="string">number:mediumint</value>
+              <value type="string">number:mediumint:signed</value>
+              <value type="string">number:int</value>
+              <value type="string">number:int:signed</value>
+              <value type="string">number:bigint</value>
+              <value type="string">number:bigint:signed</value>
+              <value type="string">number:float</value>
+              <value type="string">number:float:signed</value>
+              <value type="string">number:double</value>
+              <value type="string">number:double:signed</value>
+              <value type="string">geo:point</value>
+              <value type="string">hashlink</value>
+              <value type="string">ip</value>
+              <value type="string">timestamp</value>
+              <value type="string">boolean</value>
+              <data type="token">
+                <param name="pattern">enum:.*</param>
+              </data>
+              <data type="token">
+                <param name="pattern">number:decimal:[0-9]+:[0-9]+</param>
+              </data>
+              <data type="token">
+                <param name="pattern">number:decimal:[0-9]+:[0-9]+:signed</param>
+              </data>
+              <data type="token">
+                <param name="pattern">number:hex:[0-9]+(:[0-9]+:.)?</param>
+              </data>
+              <data type="token">
+                <param name="pattern">string:[0-9]+:((cs)|(ci))(:[ru]+)?</param>
+              </data>
+              <data type="token">
+                <param name="pattern">binstring:[0-9]+(:r)?</param>
+              </data>
+            </choice>
+          </attribute>
+          <attribute name="name">
+            <data type="token">
+              <param name="minLength">1</param>
+              <param name="maxLength">40</param>
+              <param name="pattern">[a-z0-9-]*</param>
+            </data>
+          </attribute>
+          <optional>
+            <attribute name="display-name">
+              <data type="string">
+                <param name="minLength">1</param>
+                <param name="maxLength">64</param>
+                <param name="pattern">[ a-zA-Z0-9]*/[ a-zA-Z0-9]*</param>
+              </data>
+            </attribute>
+          </optional>
+          <attribute name="description">
+            <data type="string">
+              <param name="minLength">1</param>
+              <param name="maxLength">128</param>
+            </data>
+          </attribute>
+          <optional>
+            <attribute name="fuzzy-matching">
+              <data type="token">
+                <param name="pattern">(none)|(phonetic)|(substring:.*)|(\[[0-9]{1,2}:\])|(\[:[0-9]{1,2}\])</param>
+              </data>
+            </attribute>
+          </optional>
+          <optional>
+            <attribute name="compress">
+              <choice>
+                <value type="string">true</value>
+                <value type="string">false</value>
+              </choice>
+            </attribute>
+          </optional>
+          <optional>
+            <attribute name="enp">
+              <data type="unsignedByte"/>
+            </attribute>
+          </optional>
+          <optional>
+            <attribute name="regexp">
+              <data type="string">
+              <param name="minLength">1</param>
+              <param name="maxLength">128</param>
+            </data>
+            </attribute>
+          </optional>
+        </element>
+      </zeroOrMore>
+    </element>
     <element name="eventtypes">
       <zeroOrMore>
         <element name="eventtype">
@@ -196,103 +293,6 @@
               </element>
             </zeroOrMore>
           </element>
-        </element>
-      </zeroOrMore>
-    </element>
-    <element name="objecttypes">
-      <zeroOrMore>
-        <element name="objecttype">
-          <attribute name="data-type">
-            <choice>
-              <value type="string">number:tinyint</value>
-              <value type="string">number:tinyint:signed</value>
-              <value type="string">number:smallint</value>
-              <value type="string">number:smallint:signed</value>
-              <value type="string">number:mediumint</value>
-              <value type="string">number:mediumint:signed</value>
-              <value type="string">number:int</value>
-              <value type="string">number:int:signed</value>
-              <value type="string">number:bigint</value>
-              <value type="string">number:bigint:signed</value>
-              <value type="string">number:float</value>
-              <value type="string">number:float:signed</value>
-              <value type="string">number:double</value>
-              <value type="string">number:double:signed</value>
-              <value type="string">geo:point</value>
-              <value type="string">hashlink</value>
-              <value type="string">ip</value>
-              <value type="string">timestamp</value>
-              <value type="string">boolean</value>
-              <data type="token">
-                <param name="pattern">enum:.*</param>
-              </data>
-              <data type="token">
-                <param name="pattern">number:decimal:[0-9]+:[0-9]+</param>
-              </data>
-              <data type="token">
-                <param name="pattern">number:decimal:[0-9]+:[0-9]+:signed</param>
-              </data>
-              <data type="token">
-                <param name="pattern">number:hex:[0-9]+(:[0-9]+:.)?</param>
-              </data>
-              <data type="token">
-                <param name="pattern">string:[0-9]+:((cs)|(ci))(:[ru]+)?</param>
-              </data>
-              <data type="token">
-                <param name="pattern">binstring:[0-9]+(:r)?</param>
-              </data>
-            </choice>
-          </attribute>
-          <attribute name="name">
-            <data type="token">
-              <param name="minLength">1</param>
-              <param name="maxLength">40</param>
-              <param name="pattern">[a-z0-9-]*</param>
-            </data>
-          </attribute>
-          <optional>
-            <attribute name="display-name">
-              <data type="string">
-                <param name="minLength">1</param>
-                <param name="maxLength">64</param>
-                <param name="pattern">[ a-zA-Z0-9]*/[ a-zA-Z0-9]*</param>
-              </data>
-            </attribute>
-          </optional>
-          <attribute name="description">
-            <data type="string">
-              <param name="minLength">1</param>
-              <param name="maxLength">128</param>
-            </data>
-          </attribute>
-          <optional>
-            <attribute name="fuzzy-matching">
-              <data type="token">
-                <param name="pattern">(none)|(phonetic)|(substring:.*)|(\[[0-9]{1,2}:\])|(\[:[0-9]{1,2}\])</param>
-              </data>
-            </attribute>
-          </optional>
-          <optional>
-            <attribute name="compress">
-              <choice>
-                <value type="string">true</value>
-                <value type="string">false</value>
-              </choice>
-            </attribute>
-          </optional>
-          <optional>
-            <attribute name="enp">
-              <data type="unsignedByte"/>
-            </attribute>
-          </optional>
-          <optional>
-            <attribute name="regexp">
-              <data type="string">
-              <param name="minLength">1</param>
-              <param name="maxLength">128</param>
-            </data>
-            </attribute>
-          </optional>
         </element>
       </zeroOrMore>
     </element>
