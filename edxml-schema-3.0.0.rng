@@ -299,12 +299,7 @@
     <element name="sources">
       <zeroOrMore>
         <element name="source">
-          <attribute name="source-id">
-            <data type="token">
-              <param name="minLength">1</param>
-            </data>
-          </attribute>
-          <attribute name="url">
+          <attribute name="uri">
             <data type="token">
               <param name="minLength">1</param>
               <param name="pattern">(/[a-z0-9-]+)*/</param>
@@ -336,10 +331,11 @@
             <param name="pattern">[a-z0-9-]*</param>
           </data>
         </attribute>
-        <attribute name="source-id">
-          <data type="token">
-            <param name="minLength">1</param>
-          </data>
+        <attribute name="source-uri">
+            <data type="token">
+              <param name="minLength">1</param>
+              <param name="pattern">(/[a-z0-9-]+)*/</param>
+            </data>
         </attribute>
         <zeroOrMore>
           <element name="event">
