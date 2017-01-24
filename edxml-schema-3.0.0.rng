@@ -42,7 +42,7 @@
               <value type="string">geo:point</value>
               <value type="string">hashlink</value>
               <value type="string">ip</value>
-              <value type="string">timestamp</value>
+              <value type="string">datetime</value>
               <value type="string">boolean</value>
               <data type="token">
                 <param name="pattern">enum:.*</param>
