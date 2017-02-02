@@ -366,19 +366,6 @@
                   <text/>
                 </element>
               </optional>
-              <zeroOrMore>
-                <element name="translation">
-                  <attribute name="language">
-                    <data type="string">
-                      <param name="pattern">[a-z]{2}</param>
-                    </data>
-                  </attribute>
-                  <attribute name="interpreter">
-                    <data type="string"><param name="maxLength">40</param></data>
-                  </attribute>
-                  <text/>
-                </element>
-              </zeroOrMore>
             </element>
           </zeroOrMore>
         </element>
