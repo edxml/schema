@@ -127,8 +127,8 @@
               <attribute name="name">
                 <data type="token">
                   <param name="minLength">1</param>
-                  <param name="maxLength">40</param>
-                  <param name="pattern">[a-z0-9-]*</param>
+                  <param name="maxLength">64</param>
+                  <param name="pattern">[a-z0-9.]*</param>
                 </data>
               </attribute>
               <optional>
@@ -166,8 +166,8 @@
                   <attribute name="eventtype">
                     <data type="token">
                       <param name="minLength">1</param>
-                      <param name="maxLength">40</param>
-                      <param name="pattern">[a-z0-9-]*</param>
+                      <param name="maxLength">64</param>
+                      <param name="pattern">[a-z0-9.]*</param>
                     </data>
                   </attribute>
                   <attribute name="propertymap">
@@ -334,8 +334,8 @@
           <attribute name="event-type">
             <data type="token">
               <param name="minLength">1</param>
-              <param name="maxLength">40</param>
-              <param name="pattern">[a-z0-9-]*</param>
+              <param name="maxLength">64</param>
+              <param name="pattern">[a-z0-9.]*</param>
             </data>
           </attribute>
           <attribute name="source-uri">
