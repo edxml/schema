@@ -69,8 +69,8 @@
               <attribute name="name">
                 <data type="token">
                   <param name="minLength">1</param>
-                  <param name="maxLength">40</param>
-                  <param name="pattern">[a-z0-9-]*</param>
+                  <param name="maxLength">64</param>
+                  <param name="pattern">[a-z0-9.]*</param>
                 </data>
               </attribute>
               <optional>
@@ -193,7 +193,11 @@
                 <oneOrMore>
                   <element name="property">
                     <attribute name="object-type">
-                      <data type="token"></data>
+                      <data type="token">
+                        <param name="minLength">1</param>
+                        <param name="maxLength">64</param>
+                        <param name="pattern">[a-z0-9.]*</param>
+                      </data>
                     </attribute>
                     <attribute name="name">
                       <data type="token">
