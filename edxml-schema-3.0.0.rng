@@ -104,11 +104,6 @@
                 </attribute>
               </optional>
               <optional>
-                <attribute name="enp">
-                  <data type="unsignedByte"/>
-                </attribute>
-              </optional>
-              <optional>
                 <attribute name="regexp">
                   <data type="string">
                     <param name="minLength">1</param>
@@ -253,6 +248,11 @@
                     <optional>
                       <attribute name="entity-confidence">
                         <data type="float"></data>
+                      </attribute>
+                    </optional>
+                    <optional>
+                      <attribute name="enp">
+                        <data type="unsignedByte"/>
                       </attribute>
                     </optional>
                   </element>
