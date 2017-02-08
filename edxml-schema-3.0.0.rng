@@ -116,6 +116,36 @@
         </element>
       </zeroOrMore>
       <zeroOrMore>
+        <element name="concepts">
+          <zeroOrMore>
+            <element name="concept">
+              <attribute name="name">
+                <data type="token">
+                  <param name="minLength">1</param>
+                  <param name="maxLength">64</param>
+                  <param name="pattern">[a-z0-9.]*</param>
+                </data>
+              </attribute>
+              <optional>
+                <attribute name="display-name">
+                  <data type="string">
+                    <param name="minLength">1</param>
+                    <param name="maxLength">64</param>
+                    <param name="pattern">[ a-zA-Z0-9]*/[ a-zA-Z0-9]*</param>
+                  </data>
+                </attribute>
+              </optional>
+              <attribute name="description">
+                <data type="string">
+                  <param name="minLength">1</param>
+                  <param name="maxLength">128</param>
+                </data>
+              </attribute>
+            </element>
+          </zeroOrMore>
+        </element>
+      </zeroOrMore>
+      <zeroOrMore>
         <element name="eventtypes">
           <zeroOrMore>
             <element name="eventtype">
@@ -238,15 +268,16 @@
                       </attribute>
                     </optional>
                     <optional>
-                      <attribute name="defines-entity">
-                        <choice>
-                          <value type="string">true</value>
-                          <value type="string">false</value>
-                        </choice>
+                      <attribute name="concept">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9.]*</param>
+                        </data>
                       </attribute>
                     </optional>
                     <optional>
-                      <attribute name="entity-confidence">
+                      <attribute name="concept-confidence">
                         <data type="float"></data>
                       </attribute>
                     </optional>
