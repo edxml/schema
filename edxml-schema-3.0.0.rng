@@ -7,10 +7,10 @@
 
                             version 3.0.0
 
-                Copyright 2009 - 2016 by D.H.J. Takken
+                Copyright 2009 - 2017 by D.H.J. Takken
                       (d.h.j.takken@xs4all.nl)
 
-           This file is licensed under the Creative Commons 
+           This file is licensed under the Creative Commons
                Attribution-NoDerivs 3.0 Unported License.
                  To view a copy of this license, visit
 
@@ -19,7 +19,7 @@
 -->
 
 <element name="events" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
-  <oneOrMore>
+  <zeroOrMore>
     <element name="definitions">
       <zeroOrMore>
         <element name="objecttypes">
@@ -406,5 +406,5 @@
         </element>
       </zeroOrMore>
     </element>
-  </oneOrMore>
+  </zeroOrMore>
 </element>
