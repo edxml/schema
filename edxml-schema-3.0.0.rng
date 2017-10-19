@@ -19,6 +19,11 @@
 -->
 
 <element name="edxml" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <attribute name="version">
+    <data type="token">
+      <param name="pattern">3.0.[0-9]+</param>
+    </data>
+  </attribute>
   <zeroOrMore>
     <element name="definitions">
       <zeroOrMore>
