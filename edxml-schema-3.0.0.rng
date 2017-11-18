@@ -259,7 +259,6 @@
                           <value type="string">replace</value>
                           <value type="string">min</value>
                           <value type="string">max</value>
-                          <value type="string">sum</value>
                           <value type="string">multiply</value>
                           <value type="string">match</value>
                         </choice>
