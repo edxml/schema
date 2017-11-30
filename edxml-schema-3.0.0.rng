@@ -278,7 +278,7 @@
                       </attribute>
                     </optional>
                     <optional>
-                      <attribute name="enp">
+                      <attribute name="cnp">
                         <data type="unsignedByte"/>
                       </attribute>
                     </optional>
