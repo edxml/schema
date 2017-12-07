@@ -50,6 +50,7 @@
                   <value type="string">hashlink</value>
                   <value type="string">ip</value>
                   <value type="string">datetime</value>
+                  <value type="string">sequence</value>
                   <value type="string">boolean</value>
                   <data type="token">
                     <param name="pattern">enum:.*</param>
