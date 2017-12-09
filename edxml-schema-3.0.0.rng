@@ -176,12 +176,12 @@
                   <param name="pattern">[a-z0-9, ]*</param>
                 </data>
               </attribute>
-              <attribute name="reporter-short">
+              <attribute name="summary">
                 <data type="string">
                   <param name="minLength">1</param>
                 </data>
               </attribute>
-              <attribute name="reporter-long">
+              <attribute name="story">
                 <data type="string">
                   <param name="minLength">1</param>
                 </data>
