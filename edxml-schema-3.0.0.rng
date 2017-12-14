@@ -62,7 +62,7 @@
                     <param name="pattern">number:decimal:[0-9]+:[0-9]+:signed</param>
                   </data>
                   <data type="token">
-                    <param name="pattern">number:hex:[0-9]+(:[0-9]+:.)?</param>
+                    <param name="pattern">hex:[0-9]+(:[0-9]+:.)?</param>
                   </data>
                   <data type="token">
                     <param name="pattern">string:[0-9]+:((cs)|(ci))(:[ru]+)?</param>
