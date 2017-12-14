@@ -317,7 +317,7 @@
                     <attribute name="type">
                       <data type="normalizedString">
                         <param name="maxLength">32</param>
-                        <param name="pattern">(intra|inter|parent|child|other):.+</param>
+                        <param name="pattern">(intra|inter|other):.+</param>
                       </data>
                     </attribute>
                     <attribute name="confidence">
