@@ -67,9 +67,6 @@
                   <data type="token">
                     <param name="pattern">string:[0-9]+:((cs)|(ci))(:[ru]+)?</param>
                   </data>
-                  <data type="token">
-                    <param name="pattern">binstring:[0-9]+(:r)?</param>
-                  </data>
                 </choice>
               </attribute>
               <attribute name="name">
