@@ -71,6 +71,9 @@
                   <data type="token">
                     <param name="pattern">uri:.</param>
                   </data>
+                  <data type="token">
+                    <param name="pattern">base64:[0-9]+</param>
+                  </data>
                 </choice>
               </attribute>
               <attribute name="name">
