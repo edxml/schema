@@ -228,6 +228,18 @@
                         <param name="pattern">[a-z0-9.]*</param>
                       </data>
                     </attribute>
+                    <attribute name="optional">
+                      <choice>
+                        <value type="string">true</value>
+                        <value type="string">false</value>
+                      </choice>
+                    </attribute>
+                    <attribute name="multivalued">
+                      <choice>
+                        <value type="string">true</value>
+                        <value type="string">false</value>
+                      </choice>
+                    </attribute>
                     <attribute name="name">
                       <data type="token">
                         <param name="minLength">1</param>
