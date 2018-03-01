@@ -291,7 +291,10 @@
                     </optional>
                     <optional>
                       <attribute name="concept-confidence">
-                        <data type="float"></data>
+                        <data type="unsignedByte">
+                          <param name="minInclusive">0</param>
+                          <param name="maxInclusive">10</param>
+                        </data>
                       </attribute>
                     </optional>
                     <optional>
@@ -340,7 +343,10 @@
                       </data>
                     </attribute>
                     <attribute name="confidence">
-                      <data type="float"></data>
+                      <data type="unsignedByte">
+                        <param name="minInclusive">1</param>
+                        <param name="maxInclusive">10</param>
+                      </data>
                     </attribute>
                   </element>
                 </zeroOrMore>
