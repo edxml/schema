@@ -30,6 +30,11 @@
         <element name="objecttypes">
           <zeroOrMore>
             <element name="objecttype">
+              <attribute name="version">
+                <data type="unsignedInt">
+                  <param name="minInclusive">1</param>
+                </data>
+              </attribute>
               <attribute name="data-type">
                 <choice>
                   <value type="string">number:tinyint</value>
@@ -127,6 +132,11 @@
         <element name="concepts">
           <zeroOrMore>
             <element name="concept">
+              <attribute name="version">
+                <data type="unsignedInt">
+                  <param name="minInclusive">1</param>
+                </data>
+              </attribute>
               <attribute name="name">
                 <data type="token">
                   <param name="minLength">1</param>
@@ -155,6 +165,11 @@
         <element name="eventtypes">
           <zeroOrMore>
             <element name="eventtype">
+              <attribute name="version">
+                <data type="unsignedInt">
+                  <param name="minInclusive">1</param>
+                </data>
+              </attribute>
               <attribute name="name">
                 <data type="token">
                   <param name="minLength">1</param>
@@ -359,6 +374,11 @@
         <element name="sources">
           <zeroOrMore>
             <element name="source">
+              <attribute name="version">
+                <data type="unsignedInt">
+                  <param name="minInclusive">1</param>
+                </data>
+              </attribute>
               <attribute name="uri">
                 <data type="token">
                   <param name="minLength">1</param>
