@@ -295,28 +295,26 @@
                         </choice>
                       </attribute>
                     </optional>
-                    <optional>
-                      <attribute name="concept">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
-                          <param name="pattern">[a-z0-9.]*</param>
-                        </data>
-                      </attribute>
-                    </optional>
-                    <optional>
-                      <attribute name="concept-confidence">
-                        <data type="unsignedByte">
-                          <param name="minInclusive">0</param>
-                          <param name="maxInclusive">10</param>
-                        </data>
-                      </attribute>
-                    </optional>
-                    <optional>
-                      <attribute name="cnp">
-                        <data type="unsignedByte"/>
-                      </attribute>
-                    </optional>
+                    <zeroOrMore>
+                      <element name="property-concept">
+                        <attribute name="name">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9.]*</param>
+                          </data>
+                        </attribute>
+                        <attribute name="confidence">
+                          <data type="unsignedByte">
+                            <param name="minInclusive">0</param>
+                            <param name="maxInclusive">10</param>
+                          </data>
+                        </attribute>
+                        <attribute name="cnp">
+                          <data type="unsignedByte"/>
+                        </attribute>
+                      </element>
+                    </zeroOrMore>
                   </element>
                 </oneOrMore>
               </element>
@@ -337,6 +335,22 @@
                         <param name="pattern">[a-z0-9-]*</param>
                       </data>
                     </attribute>
+                    <optional>
+                      <attribute name="concept1">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9.]*</param>
+                        </data>
+                      </attribute>
+                      <attribute name="concept2">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9.]*</param>
+                        </data>
+                      </attribute>
+                    </optional>
                     <optional>
                       <attribute name="directed">
                         <choice>
