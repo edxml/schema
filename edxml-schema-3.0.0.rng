@@ -18,14 +18,14 @@
 
 -->
 
-<element name="edxml" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<element name="edxml" xmlns="http://relaxng.org/ns/structure/1.0" ns="http://edxml.org/edxml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <attribute name="version">
     <data type="token">
       <param name="pattern">3.0.[0-9]+</param>
     </data>
   </attribute>
   <zeroOrMore>
-    <element name="ontology">
+    <element name="ontology" ns="http://edxml.org/edxml">
       <zeroOrMore>
         <element name="objecttypes">
           <zeroOrMore>
@@ -416,7 +416,7 @@
         </element>
       </zeroOrMore>
     </element>
-    <element name="eventgroups">
+    <element name="eventgroups" ns="http://edxml.org/edxml">
       <zeroOrMore>
         <element name="eventgroup">
           <attribute name="event-type">
