@@ -239,6 +239,24 @@
                 </data>
               </attribute>
               <optional>
+                <attribute name="timespan-start">
+                  <data type="token">
+                    <param name="minLength">1</param>
+                    <param name="maxLength">64</param>
+                    <param name="pattern">[a-z0-9-]*</param>
+                  </data>
+                </attribute>
+              </optional>
+              <optional>
+                <attribute name="timespan-end">
+                  <data type="token">
+                    <param name="minLength">1</param>
+                    <param name="maxLength">64</param>
+                    <param name="pattern">[a-z0-9-]*</param>
+                  </data>
+                </attribute>
+              </optional>
+              <optional>
                 <element name="parent">
                   <attribute name="eventtype">
                     <data type="token">
