@@ -223,11 +223,14 @@
                   <param name="maxLength">128</param>
                 </data>
               </attribute>
-              <attribute name="classlist">
-                <data type="string">
-                  <param name="pattern">[a-z0-9, ]*</param>
-                </data>
-              </attribute>
+              <optional>
+                <attribute name="classlist">
+                  <data type="string">
+                    <param name="minLength">1</param>
+                    <param name="pattern">[a-z0-9, ]*</param>
+                  </data>
+                </attribute>
+              </optional>
               <attribute name="summary">
                 <data type="string">
                   <param name="minLength">1</param>
