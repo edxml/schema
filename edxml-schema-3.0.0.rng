@@ -118,7 +118,7 @@
                 <data type="token">
                   <param name="minLength">1</param>
                   <param name="maxLength">64</param>
-                  <param name="pattern">[a-z0-9.]*</param>
+                  <param name="pattern">[a-z0-9.-]*</param>
                 </data>
               </attribute>
               <attribute name="display-name">
@@ -174,7 +174,7 @@
                 <data type="token">
                   <param name="minLength">1</param>
                   <param name="maxLength">64</param>
-                  <param name="pattern">[a-z0-9.]*</param>
+                  <param name="pattern">[a-z0-9.-]*</param>
                 </data>
               </attribute>
               <attribute name="display-name">
@@ -207,7 +207,7 @@
                 <data type="token">
                   <param name="minLength">1</param>
                   <param name="maxLength">64</param>
-                  <param name="pattern">[a-z0-9.]*</param>
+                  <param name="pattern">[a-z0-9.-]*</param>
                 </data>
               </attribute>
               <attribute name="display-name">
@@ -265,7 +265,7 @@
                     <data type="token">
                       <param name="minLength">1</param>
                       <param name="maxLength">64</param>
-                      <param name="pattern">[a-z0-9.]*</param>
+                      <param name="pattern">[a-z0-9.-]*</param>
                     </data>
                   </attribute>
                   <attribute name="propertymap">
@@ -294,7 +294,7 @@
                       <data type="token">
                         <param name="minLength">1</param>
                         <param name="maxLength">64</param>
-                        <param name="pattern">[a-z0-9.]*</param>
+                        <param name="pattern">[a-z0-9.-]*</param>
                       </data>
                     </attribute>
                     <attribute name="optional">
@@ -355,7 +355,7 @@
                           <data type="token">
                             <param name="minLength">1</param>
                             <param name="maxLength">64</param>
-                            <param name="pattern">[a-z0-9.]*</param>
+                            <param name="pattern">[a-z0-9.-]*</param>
                           </data>
                         </attribute>
                         <attribute name="confidence">
@@ -394,14 +394,14 @@
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
-                          <param name="pattern">[a-z0-9.]*</param>
+                          <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
                       <attribute name="concept2">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
-                          <param name="pattern">[a-z0-9.]*</param>
+                          <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
                     </optional>
@@ -479,7 +479,7 @@
             <data type="token">
               <param name="minLength">1</param>
               <param name="maxLength">64</param>
-              <param name="pattern">[a-z0-9.]*</param>
+              <param name="pattern">[a-z0-9.-]*</param>
             </data>
           </attribute>
           <attribute name="source-uri">
