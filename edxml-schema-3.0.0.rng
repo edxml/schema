@@ -375,22 +375,22 @@
               <optional>
                 <element name="relations">
                   <zeroOrMore>
-                    <element name="relation">
-                      <attribute name="property1">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
-                          <param name="pattern">[a-z0-9-]*</param>
-                        </data>
-                      </attribute>
-                      <attribute name="property2">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
-                          <param name="pattern">[a-z0-9-]*</param>
-                        </data>
-                      </attribute>
-                      <optional>
+                    <choice>
+                      <element name="inter">
+                        <attribute name="property1">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9-]*</param>
+                          </data>
+                        </attribute>
+                        <attribute name="property2">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9-]*</param>
+                          </data>
+                        </attribute>
                         <attribute name="concept1">
                           <data type="token">
                             <param name="minLength">1</param>
@@ -405,34 +405,129 @@
                             <param name="pattern">[a-z0-9.-]*</param>
                           </data>
                         </attribute>
-                      </optional>
-                      <optional>
-                        <attribute name="directed">
-                          <choice>
-                            <value type="string">true</value>
-                            <value type="string">false</value>
-                          </choice>
+                        <optional>
+                          <attribute name="directed">
+                            <choice>
+                              <value type="string">true</value>
+                              <value type="string">false</value>
+                            </choice>
+                          </attribute>
+                        </optional>
+                        <attribute name="description">
+                          <data type="normalizedString">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">255</param>
+                          </data>
                         </attribute>
-                      </optional>
-                      <attribute name="description">
-                        <data type="normalizedString">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">255</param>
-                        </data>
-                      </attribute>
-                      <attribute name="type">
-                        <data type="normalizedString">
-                          <param name="maxLength">32</param>
-                          <param name="pattern">(intra|inter|other):.+</param>
-                        </data>
-                      </attribute>
-                      <attribute name="confidence">
-                        <data type="unsignedByte">
-                          <param name="minInclusive">1</param>
-                          <param name="maxInclusive">10</param>
-                        </data>
-                      </attribute>
-                    </element>
+                        <attribute name="predicate">
+                          <data type="normalizedString">
+                            <param name="maxLength">32</param>
+                          </data>
+                        </attribute>
+                        <attribute name="confidence">
+                          <data type="unsignedByte">
+                            <param name="minInclusive">1</param>
+                            <param name="maxInclusive">10</param>
+                          </data>
+                        </attribute>
+                      </element>
+                      <element name="intra">
+                        <attribute name="property1">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9-]*</param>
+                          </data>
+                        </attribute>
+                        <attribute name="property2">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9-]*</param>
+                          </data>
+                        </attribute>
+                        <attribute name="concept1">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9.-]*</param>
+                          </data>
+                        </attribute>
+                        <attribute name="concept2">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9.-]*</param>
+                          </data>
+                        </attribute>
+                        <optional>
+                          <attribute name="directed">
+                            <choice>
+                              <value type="string">true</value>
+                              <value type="string">false</value>
+                            </choice>
+                          </attribute>
+                        </optional>
+                        <attribute name="description">
+                          <data type="normalizedString">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">255</param>
+                          </data>
+                        </attribute>
+                        <attribute name="predicate">
+                          <data type="normalizedString">
+                            <param name="maxLength">32</param>
+                          </data>
+                        </attribute>
+                        <attribute name="confidence">
+                          <data type="unsignedByte">
+                            <param name="minInclusive">1</param>
+                            <param name="maxInclusive">10</param>
+                          </data>
+                        </attribute>
+                      </element>
+                      <element name="other">
+                        <attribute name="property1">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9-]*</param>
+                          </data>
+                        </attribute>
+                        <attribute name="property2">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">64</param>
+                            <param name="pattern">[a-z0-9-]*</param>
+                          </data>
+                        </attribute>
+                        <optional>
+                          <attribute name="directed">
+                            <choice>
+                              <value type="string">true</value>
+                              <value type="string">false</value>
+                            </choice>
+                          </attribute>
+                        </optional>
+                        <attribute name="description">
+                          <data type="normalizedString">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">255</param>
+                          </data>
+                        </attribute>
+                        <attribute name="predicate">
+                          <data type="normalizedString">
+                            <param name="maxLength">32</param>
+                          </data>
+                        </attribute>
+                        <attribute name="confidence">
+                          <data type="unsignedByte">
+                            <param name="minInclusive">1</param>
+                            <param name="maxInclusive">10</param>
+                          </data>
+                        </attribute>
+                      </element>
+                    </choice>
                   </zeroOrMore>
                 </element>
               </optional>
