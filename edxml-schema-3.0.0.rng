@@ -59,7 +59,7 @@
   </define>
   <define name="ontology-node">
     <element name="ontology" ns="http://edxml.org/edxml">
-      <zeroOrMore>
+      <optional>
         <element name="objecttypes">
           <zeroOrMore>
             <element name="objecttype">
@@ -160,8 +160,8 @@
             </element>
           </zeroOrMore>
         </element>
-      </zeroOrMore>
-      <zeroOrMore>
+      </optional>
+      <optional>
         <element name="concepts">
           <zeroOrMore>
             <element name="concept">
@@ -193,8 +193,8 @@
             </element>
           </zeroOrMore>
         </element>
-      </zeroOrMore>
-      <zeroOrMore>
+      </optional>
+      <optional>
         <element name="eventtypes">
           <zeroOrMore>
             <element name="eventtype">
@@ -439,7 +439,7 @@
             </element>
           </zeroOrMore>
         </element>
-      </zeroOrMore>
+      </optional>
       <zeroOrMore>
         <element name="sources">
           <zeroOrMore>
