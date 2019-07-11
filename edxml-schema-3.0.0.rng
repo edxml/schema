@@ -51,8 +51,13 @@
         </oneOrMore>
       </element>
       <optional>
-        <element name="content">
-          <text/>
+        <element name="attachments">
+        <zeroOrMore>
+          <element>
+            <anyName/>
+            <text/>
+          </element>
+        </zeroOrMore>
         </element>
       </optional>
     </element>
@@ -528,6 +533,47 @@
                         </attribute>
                       </element>
                     </choice>
+                  </zeroOrMore>
+                </element>
+              </optional>
+              <optional>
+                <element name="attachments">
+                  <zeroOrMore>
+                    <element name="attachment">
+                      <attribute name="name">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9-]*</param>
+                        </data>
+                      </attribute>
+                      <attribute name="display-name">
+                        <data type="string">
+                          <param name="minLength">3</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[ a-zA-Z0-9]+/[ a-zA-Z0-9]+</param>
+                        </data>
+                      </attribute>
+                      <attribute name="description">
+                        <data type="normalizedString">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">128</param>
+                        </data>
+                      </attribute>
+                      <attribute name="media-type">
+                        <data type="normalizedString">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">128</param>
+                          <param name="pattern">[0-9A-Za-z!#$%&amp;'*+.^_`|~-]+/[0-9A-Za-z!#$%&amp;'*+.^_`|~-]+</param>
+                        </data>
+                      </attribute>
+                      <attribute name="encoding">
+                        <choice>
+                          <value type="string">unicode</value>
+                          <value type="string">base64</value>
+                        </choice>
+                      </attribute>
+                    </element>
                   </zeroOrMore>
                 </element>
               </optional>
