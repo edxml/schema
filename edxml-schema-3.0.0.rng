@@ -28,13 +28,31 @@
       </attribute>
       <zeroOrMore>
         <ref name="ontology-node"></ref>
-        <ref name="eventgroups-node"></ref>
+          <zeroOrMore>
+            <choice>
+              <ref name="foreign-node"></ref>
+              <ref name="event-node"></ref>
+            </choice>
+          </zeroOrMore>
       </zeroOrMore>
     </element>
   </start>
   <define name="event-node">
     <element name="event" ns="http://edxml.org/edxml">
       <ref name="foreign-attributes"></ref>
+      <attribute name="event-type">
+        <data type="token">
+          <param name="minLength">1</param>
+          <param name="maxLength">64</param>
+          <param name="pattern">[a-z0-9.-]*</param>
+        </data>
+      </attribute>
+      <attribute name="source-uri">
+        <data type="token">
+          <param name="minLength">1</param>
+          <param name="pattern">(/[a-z0-9-]+)*/</param>
+        </data>
+      </attribute>
       <optional>
         <attribute name="parents">
           <data type="normalizedString">
@@ -629,33 +647,6 @@
                 </data>
               </attribute>
             </element>
-          </zeroOrMore>
-        </element>
-      </zeroOrMore>
-    </element>
-  </define>
-  <define name="eventgroups-node">
-    <element name="eventgroups" ns="http://edxml.org/edxml">
-      <zeroOrMore>
-        <element name="eventgroup">
-          <attribute name="event-type">
-            <data type="token">
-              <param name="minLength">1</param>
-              <param name="maxLength">64</param>
-              <param name="pattern">[a-z0-9.-]*</param>
-            </data>
-          </attribute>
-          <attribute name="source-uri">
-            <data type="token">
-              <param name="minLength">1</param>
-              <param name="pattern">(/[a-z0-9-]+)*/</param>
-            </data>
-          </attribute>
-          <zeroOrMore>
-            <choice>
-              <ref name="foreign-node"></ref>
-              <ref name="event-node"></ref>
-            </choice>
           </zeroOrMore>
         </element>
       </zeroOrMore>
