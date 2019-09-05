@@ -156,7 +156,7 @@
               </data>
             </attribute>
             <attribute name="description">
-              <data type="string">
+              <data type="token">
                 <param name="minLength">1</param>
                 <param name="maxLength">128</param>
               </data>
@@ -215,7 +215,7 @@
               </data>
             </attribute>
             <attribute name="description">
-              <data type="string">
+              <data type="token">
                 <param name="minLength">1</param>
                 <param name="maxLength">128</param>
               </data>
@@ -251,26 +251,26 @@
               </data>
             </attribute>
             <attribute name="description">
-              <data type="string">
+              <data type="token">
                 <param name="minLength">1</param>
                 <param name="maxLength">128</param>
               </data>
             </attribute>
             <optional>
               <attribute name="classlist">
-                <data type="string">
+                <data type="token">
                   <param name="minLength">1</param>
                   <param name="pattern">[a-z0-9, ]*</param>
                 </data>
               </attribute>
             </optional>
             <attribute name="summary">
-              <data type="string">
+              <data type="token">
                 <param name="minLength">1</param>
               </data>
             </attribute>
             <attribute name="story">
-              <data type="string">
+              <data type="token">
                 <param name="minLength">1</param>
               </data>
             </attribute>
@@ -307,13 +307,13 @@
                   </data>
                 </attribute>
                 <attribute name="parent-description">
-                  <data type="string">
+                  <data type="token">
                     <param name="minLength">1</param>
                     <param name="maxLength">128</param>
                   </data>
                 </attribute>
                 <attribute name="siblings-description">
-                  <data type="string">
+                  <data type="token">
                     <param name="minLength">1</param>
                     <param name="maxLength">128</param>
                   </data>
@@ -350,14 +350,14 @@
                     </data>
                   </attribute>
                   <attribute name="description">
-                    <data type="normalizedString">
+                    <data type="token">
                       <param name="minLength">1</param>
                       <param name="maxLength">128</param>
                     </data>
                   </attribute>
                   <optional>
                     <attribute name="similar">
-                      <data type="normalizedString">
+                      <data type="token">
                         <param name="maxLength">64</param>
                       </data>
                     </attribute>
@@ -447,13 +447,13 @@
                         </attribute>
                       </optional>
                       <attribute name="description">
-                        <data type="normalizedString">
+                        <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">255</param>
                         </data>
                       </attribute>
                       <attribute name="predicate">
-                        <data type="normalizedString">
+                        <data type="token">
                           <param name="maxLength">32</param>
                         </data>
                       </attribute>
@@ -502,13 +502,13 @@
                         </attribute>
                       </optional>
                       <attribute name="description">
-                        <data type="normalizedString">
+                        <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">255</param>
                         </data>
                       </attribute>
                       <attribute name="predicate">
-                        <data type="normalizedString">
+                        <data type="token">
                           <param name="maxLength">32</param>
                         </data>
                       </attribute>
@@ -543,13 +543,13 @@
                         </attribute>
                       </optional>
                       <attribute name="description">
-                        <data type="normalizedString">
+                        <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">255</param>
                         </data>
                       </attribute>
                       <attribute name="predicate">
-                        <data type="normalizedString">
+                        <data type="token">
                           <param name="maxLength">32</param>
                         </data>
                       </attribute>
@@ -588,7 +588,7 @@
                       </data>
                     </attribute>
                     <attribute name="description">
-                      <data type="normalizedString">
+                      <data type="token">
                         <param name="minLength">1</param>
                         <param name="maxLength">128</param>
                       </data>
