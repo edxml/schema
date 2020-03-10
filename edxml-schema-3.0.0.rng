@@ -27,19 +27,19 @@
         </data>
       </attribute>
       <zeroOrMore>
-        <ref name="ontology-node"></ref>
-          <zeroOrMore>
-            <choice>
-              <ref name="foreign-node"></ref>
-              <ref name="event-node"></ref>
-            </choice>
-          </zeroOrMore>
+        <ref name="ontology-node"/>
+        <zeroOrMore>
+          <choice>
+            <ref name="foreign-node"/>
+            <ref name="event-node"/>
+          </choice>
+        </zeroOrMore>
       </zeroOrMore>
     </element>
   </start>
   <define name="event-node">
     <element name="event" ns="http://edxml.org/edxml">
-      <ref name="foreign-attributes"></ref>
+      <ref name="foreign-attributes"/>
       <attribute name="event-type">
         <data type="token">
           <param name="minLength">1</param>
