@@ -293,6 +293,24 @@
               </attribute>
             </optional>
             <optional>
+              <attribute name="sequence">
+                <data type="token">
+                  <param name="minLength">1</param>
+                  <param name="maxLength">64</param>
+                  <param name="pattern">[a-z0-9-]*</param>
+                </data>
+              </attribute>
+            </optional>
+            <optional>
+              <attribute name="event-version">
+                <data type="token">
+                  <param name="minLength">1</param>
+                  <param name="maxLength">64</param>
+                  <param name="pattern">[a-z0-9-]*</param>
+                </data>
+              </attribute>
+            </optional>
+            <optional>
               <element name="parent">
                 <attribute name="eventtype">
                   <data type="token">
