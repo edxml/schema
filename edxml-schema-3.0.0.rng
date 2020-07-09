@@ -418,6 +418,29 @@
                       <attribute name="cnp">
                         <data type="unsignedByte"/>
                       </attribute>
+                      <optional>
+                        <attribute name="attr-extension">
+                          <data type="token">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">16</param>
+                            <param name="pattern">[a-z0-9.-]*</param>
+                          </data>
+                        </attribute>
+                        <optional>
+                          <attribute name="attr-display-name-singular">
+                            <data type="token">
+                              <param name="minLength">1</param>
+                              <param name="maxLength">32</param>
+                            </data>
+                          </attribute>
+                          <attribute name="attr-display-name-plural">
+                            <data type="token">
+                              <param name="minLength">1</param>
+                              <param name="maxLength">32</param>
+                            </data>
+                          </attribute>
+                        </optional>
+                      </optional>
                     </element>
                   </zeroOrMore>
                 </element>
