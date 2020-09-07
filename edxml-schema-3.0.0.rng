@@ -393,6 +393,7 @@
                       <choice>
                         <value type="string">drop</value>
                         <value type="string">add</value>
+                        <value type="string">set</value>
                         <value type="string">replace</value>
                         <value type="string">min</value>
                         <value type="string">max</value>
