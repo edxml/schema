@@ -108,7 +108,8 @@
                 <value type="string">number:double:signed</value>
                 <value type="string">geo:point</value>
                 <value type="string">hashlink</value>
-                <value type="string">ip</value>
+                <value type="string">ip:v4</value>
+                <value type="string">ip:v6</value>
                 <value type="string">datetime</value>
                 <value type="string">sequence</value>
                 <value type="string">uuid</value>
