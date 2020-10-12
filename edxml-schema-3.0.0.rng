@@ -382,14 +382,6 @@
                     </attribute>
                   </optional>
                   <optional>
-                    <attribute name="unique">
-                      <choice>
-                        <value type="string">true</value>
-                        <value type="string">false</value>
-                      </choice>
-                    </attribute>
-                  </optional>
-                  <optional>
                     <attribute name="merge">
                       <choice>
                         <value type="string">drop</value>
