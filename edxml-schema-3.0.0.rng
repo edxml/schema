@@ -163,6 +163,20 @@
               </data>
             </attribute>
             <optional>
+              <attribute name="unit-name">
+                <data type="token">
+                  <param name="minLength">1</param>
+                  <param name="maxLength">32</param>
+                </data>
+              </attribute>
+              <attribute name="unit-symbol">
+                <data type="token">
+                  <param name="minLength">1</param>
+                  <param name="maxLength">8</param>
+                </data>
+              </attribute>
+            </optional>
+            <optional>
               <attribute name="fuzzy-matching">
                 <data type="token">
                   <param name="pattern">(phonetic)|(substring:.*)|(\[[0-9]{1,2}:\])|(\[:[0-9]{1,2}\])</param>
