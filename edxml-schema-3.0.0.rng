@@ -165,7 +165,7 @@
             <optional>
               <attribute name="fuzzy-matching">
                 <data type="token">
-                  <param name="pattern">(none)|(phonetic)|(substring:.*)|(\[[0-9]{1,2}:\])|(\[:[0-9]{1,2}\])</param>
+                  <param name="pattern">(phonetic)|(substring:.*)|(\[[0-9]{1,2}:\])|(\[:[0-9]{1,2}\])</param>
                 </data>
               </attribute>
             </optional>
