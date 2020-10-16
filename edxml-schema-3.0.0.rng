@@ -177,6 +177,14 @@
               </attribute>
             </optional>
             <optional>
+              <attribute name="prefix-radix">
+                <choice>
+                  <value type="string">2</value>
+                  <value type="string">10</value>
+                </choice>
+              </attribute>
+            </optional>
+            <optional>
               <attribute name="fuzzy-matching">
                 <data type="token">
                   <param name="pattern">(phonetic)|(substring:.*)|(\[[0-9]{1,2}:\])|(\[:[0-9]{1,2}\])</param>
