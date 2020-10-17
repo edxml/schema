@@ -690,12 +690,14 @@
                 <param name="maxLength">128</param>
               </data>
             </attribute>
+            <optional>
             <attribute name="date-acquired">
               <data type="normalizedString">
                 <param name="maxLength">8</param>
                 <param name="pattern">[0-9]{8}</param>
               </data>
             </attribute>
+            </optional>
           </element>
         </zeroOrMore>
       </element>
