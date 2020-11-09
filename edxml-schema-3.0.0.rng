@@ -412,7 +412,7 @@
                   <optional>
                     <attribute name="merge">
                       <choice>
-                        <value type="string">drop</value>
+                        <value type="string">any</value>
                         <value type="string">add</value>
                         <value type="string">set</value>
                         <value type="string">replace</value>
