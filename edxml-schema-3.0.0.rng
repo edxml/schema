@@ -473,28 +473,28 @@
                 <zeroOrMore>
                   <choice>
                     <element name="inter">
-                      <attribute name="property1">
+                      <attribute name="source">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
                           <param name="pattern">[a-z0-9-]*</param>
                         </data>
                       </attribute>
-                      <attribute name="property2">
+                      <attribute name="target">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
                           <param name="pattern">[a-z0-9-]*</param>
                         </data>
                       </attribute>
-                      <attribute name="concept1">
+                      <attribute name="source-concept">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
-                      <attribute name="concept2">
+                      <attribute name="target-concept">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
@@ -520,28 +520,28 @@
                       </attribute>
                     </element>
                     <element name="intra">
-                      <attribute name="property1">
+                      <attribute name="source">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
                           <param name="pattern">[a-z0-9-]*</param>
                         </data>
                       </attribute>
-                      <attribute name="property2">
+                      <attribute name="target">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
                           <param name="pattern">[a-z0-9-]*</param>
                         </data>
                       </attribute>
-                      <attribute name="concept1">
+                      <attribute name="source-concept">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
-                      <attribute name="concept2">
+                      <attribute name="target-concept">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
@@ -567,14 +567,14 @@
                       </attribute>
                     </element>
                     <element name="other">
-                      <attribute name="property1">
+                      <attribute name="source">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
                           <param name="pattern">[a-z0-9-]*</param>
                         </data>
                       </attribute>
-                      <attribute name="property2">
+                      <attribute name="target">
                         <data type="token">
                           <param name="minLength">1</param>
                           <param name="maxLength">64</param>
