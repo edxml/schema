@@ -501,14 +501,6 @@
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
-                      <optional>
-                        <attribute name="directed">
-                          <choice>
-                            <value type="string">true</value>
-                            <value type="string">false</value>
-                          </choice>
-                        </attribute>
-                      </optional>
                       <attribute name="description">
                         <data type="token">
                           <param name="minLength">1</param>
@@ -556,14 +548,6 @@
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
-                      <optional>
-                        <attribute name="directed">
-                          <choice>
-                            <value type="string">true</value>
-                            <value type="string">false</value>
-                          </choice>
-                        </attribute>
-                      </optional>
                       <attribute name="description">
                         <data type="token">
                           <param name="minLength">1</param>
@@ -597,14 +581,6 @@
                           <param name="pattern">[a-z0-9-]*</param>
                         </data>
                       </attribute>
-                      <optional>
-                        <attribute name="directed">
-                          <choice>
-                            <value type="string">true</value>
-                            <value type="string">false</value>
-                          </choice>
-                        </attribute>
-                      </optional>
                       <attribute name="description">
                         <data type="token">
                           <param name="minLength">1</param>
