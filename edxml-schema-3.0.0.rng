@@ -602,6 +602,54 @@
                         </data>
                       </attribute>
                     </element>
+                    <element name="name">
+                      <attribute name="source">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9-]*</param>
+                        </data>
+                      </attribute>
+                      <attribute name="target">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9-]*</param>
+                        </data>
+                      </attribute>
+                    </element>
+                    <element name="description">
+                      <attribute name="source">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9-]*</param>
+                        </data>
+                      </attribute>
+                      <attribute name="target">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9-]*</param>
+                        </data>
+                      </attribute>
+                    </element>
+                    <element name="container">
+                      <attribute name="source">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9-]*</param>
+                        </data>
+                      </attribute>
+                      <attribute name="target">
+                        <data type="token">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">64</param>
+                          <param name="pattern">[a-z0-9-]*</param>
+                        </data>
+                      </attribute>
+                    </element>
                   </choice>
                 </zeroOrMore>
               </element>
