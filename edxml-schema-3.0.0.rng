@@ -86,9 +86,9 @@
   </define>
   <define name="ontology-node">
     <element name="ontology" ns="http://edxml.org/edxml">
-      <element name="objecttypes">
+      <element name="object-types">
         <zeroOrMore>
-          <element name="objecttype">
+          <element name="object-type">
             <attribute name="version">
               <data type="unsignedInt">
                 <param name="minInclusive">1</param>
@@ -253,9 +253,9 @@
           </element>
         </zeroOrMore>
       </element>
-      <element name="eventtypes">
+      <element name="event-types">
         <zeroOrMore>
-          <element name="eventtype">
+          <element name="event-type">
             <attribute name="version">
               <data type="unsignedInt">
                 <param name="minInclusive">1</param>
@@ -287,7 +287,7 @@
               </data>
             </attribute>
             <optional>
-              <attribute name="classlist">
+              <attribute name="class-list">
                 <data type="token">
                   <param name="minLength">1</param>
                   <param name="pattern">[a-z0-9, ]*</param>
@@ -342,14 +342,14 @@
             </optional>
             <optional>
               <element name="parent">
-                <attribute name="eventtype">
+                <attribute name="event-type">
                   <data type="token">
                     <param name="minLength">1</param>
                     <param name="maxLength">64</param>
                     <param name="pattern">[a-z0-9.-]*</param>
                   </data>
                 </attribute>
-                <attribute name="propertymap">
+                <attribute name="property-map">
                   <data type="string">
                     <param name="pattern">[a-z0-9-]{1,64}:[a-z0-9-]{1,64}(,[a-z0-9-]{1,64}:[a-z0-9-]{1,64})*</param>
                   </data>
