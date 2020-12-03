@@ -27,13 +27,13 @@
         </data>
       </attribute>
       <zeroOrMore>
-        <ref name="foreign-node"/>
+        <ref name="foreign-element"/>
       </zeroOrMore>
       <zeroOrMore>
         <ref name="ontology-node"/>
         <zeroOrMore>
           <choice>
-            <ref name="foreign-node"/>
+            <ref name="foreign-element"/>
             <ref name="event-node"/>
           </choice>
         </zeroOrMore>
@@ -42,7 +42,7 @@
   </start>
   <define name="event-node">
     <element name="event" ns="http://edxml.org/edxml">
-      <ref name="foreign-attributes"/>
+      <ref name="foreign-attributes-ns"/>
       <attribute name="event-type">
         <data type="token">
           <param name="minLength">1</param>
@@ -744,29 +744,41 @@
       <choice>
         <element>
           <anyName/>
+          <zeroOrMore>
+            <attribute>
+              <anyName/>
+            </attribute>
+          </zeroOrMore>
           <ref name="anything"/>
         </element>
-        <attribute>
-          <anyName/>
-        </attribute>
         <text/>
       </choice>
     </zeroOrMore>
   </define>
-  <define name="foreign-elements">
+  <define name="foreign-element">
+    <element>
+      <anyName>
+        <except>
+          <nsName ns=""/>
+          <nsName ns="http://edxml.org/edxml"/>
+        </except>
+      </anyName>
+      <ref name="foreign-attributes"/>
+      <ref name="anything"/>
+    </element>
+  </define>
+  <define name="foreign-attributes">
     <zeroOrMore>
-      <element>
+      <attribute>
         <anyName>
           <except>
-            <nsName ns=""/>
             <nsName ns="http://edxml.org/edxml"/>
           </except>
         </anyName>
-        <ref name="anything"/>
-      </element>
+      </attribute>
     </zeroOrMore>
   </define>
-  <define name="foreign-attributes">
+  <define name="foreign-attributes-ns">
     <zeroOrMore>
       <attribute>
         <anyName>
@@ -777,11 +789,5 @@
         </anyName>
       </attribute>
     </zeroOrMore>
-  </define>
-  <define name="foreign-node">
-    <choice>
-      <ref name="foreign-attributes"/>
-      <ref name="foreign-elements"/>
-    </choice>
   </define>
 </grammar>
