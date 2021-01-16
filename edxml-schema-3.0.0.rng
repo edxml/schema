@@ -493,7 +493,7 @@
                       </attribute>
                       <attribute name="confidence">
                         <data type="unsignedByte">
-                          <param name="minInclusive">1</param>
+                          <param name="minInclusive">0</param>
                           <param name="maxInclusive">10</param>
                         </data>
                       </attribute>
@@ -532,7 +532,7 @@
                       </attribute>
                       <attribute name="confidence">
                         <data type="unsignedByte">
-                          <param name="minInclusive">1</param>
+                          <param name="minInclusive">0</param>
                           <param name="maxInclusive">10</param>
                         </data>
                       </attribute>
@@ -557,7 +557,7 @@
                       </attribute>
                       <attribute name="confidence">
                         <data type="unsignedByte">
-                          <param name="minInclusive">1</param>
+                          <param name="minInclusive">0</param>
                           <param name="maxInclusive">10</param>
                         </data>
                       </attribute>
