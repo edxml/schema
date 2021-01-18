@@ -214,6 +214,14 @@
                 </data>
               </attribute>
             </optional>
+            <optional>
+              <attribute name="regex-soft">
+                <data type="string">
+                  <param name="minLength">1</param>
+                  <param name="maxLength">128</param>
+                </data>
+              </attribute>
+            </optional>
           </element>
         </zeroOrMore>
       </element>
