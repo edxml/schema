@@ -207,7 +207,7 @@
               </attribute>
             </optional>
             <optional>
-              <attribute name="regexp">
+              <attribute name="regex-hard">
                 <data type="string">
                   <param name="minLength">1</param>
                   <param name="maxLength">128</param>
