@@ -594,6 +594,14 @@
                         <ref name="property-name"/>
                       </attribute>
                     </element>
+                    <element name="original">
+                      <attribute name="source">
+                        <ref name="property-name"/>
+                      </attribute>
+                      <attribute name="target">
+                        <ref name="property-name"/>
+                      </attribute>
+                    </element>
                   </choice>
                 </zeroOrMore>
               </element>
