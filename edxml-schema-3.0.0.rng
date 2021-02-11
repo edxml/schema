@@ -182,15 +182,15 @@
                   <param name="maxLength">8</param>
                 </data>
               </attribute>
-            </optional>
-            <optional>
-              <attribute name="prefix-radix">
-                <choice>
-                  <value type="string">2</value>
-                  <value type="string">10</value>
-                  <value type="string">60</value>
-                </choice>
-              </attribute>
+              <optional>
+                <attribute name="prefix-radix">
+                  <choice>
+                    <value type="string">2</value>
+                    <value type="string">10</value>
+                    <value type="string">60</value>
+                  </choice>
+                </attribute>
+              </optional>
             </optional>
             <optional>
               <attribute name="fuzzy-matching">
