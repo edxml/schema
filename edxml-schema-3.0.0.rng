@@ -297,14 +297,6 @@
                 <param name="maxLength">128</param>
               </data>
             </attribute>
-            <optional>
-              <attribute name="class-list">
-                <data type="token">
-                  <param name="minLength">1</param>
-                  <param name="pattern">[a-z0-9, ]*</param>
-                </data>
-              </attribute>
-            </optional>
             <attribute name="summary">
               <data type="token">
                 <param name="minLength">1</param>
