@@ -239,7 +239,7 @@
             <attribute name="name">
               <data type="token">
                 <param name="minLength">1</param>
-                <param name="maxLength">64</param>
+                <param name="maxLength">255</param>
                 <param name="pattern">[a-z0-9.-]*</param>
               </data>
             </attribute>
@@ -417,7 +417,7 @@
                       <attribute name="name">
                         <data type="token">
                           <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
+                          <param name="maxLength">255</param>
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
@@ -472,14 +472,14 @@
                       <attribute name="source-concept">
                         <data type="token">
                           <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
+                          <param name="maxLength">255</param>
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
                       <attribute name="target-concept">
                         <data type="token">
                           <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
+                          <param name="maxLength">255</param>
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
@@ -511,14 +511,14 @@
                       <attribute name="source-concept">
                         <data type="token">
                           <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
+                          <param name="maxLength">255</param>
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
                       <attribute name="target-concept">
                         <data type="token">
                           <param name="minLength">1</param>
-                          <param name="maxLength">64</param>
+                          <param name="maxLength">255</param>
                           <param name="pattern">[a-z0-9.-]*</param>
                         </data>
                       </attribute>
