@@ -1,0 +1,4 @@
+/build/
+/dist/
+/edxml_schema.egg-info/
+__pycache__/
