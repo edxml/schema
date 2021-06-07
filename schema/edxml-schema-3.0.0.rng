@@ -202,6 +202,13 @@
               </attribute>
             </optional>
             <optional>
+              <attribute name="xref">
+                <data type="string">
+                  <param name="minLength">1</param>
+                </data>
+              </attribute>
+            </optional>
+            <optional>
               <attribute name="compress">
                 <choice>
                   <value type="string">true</value>
