@@ -19,7 +19,7 @@ setuptools.setup(
     name="edxml-schema",
     version="3.0.0.dev2",
     author="Dik Takken",
-    author_email="d.h.j.takken@edxml.org",
+    author_email="dik.takken@edxml.org",
     description="The RelaxNG schema that is part of the EDXML specification",
     long_description=long_description,
     long_description_content_type="text/x-rst",
