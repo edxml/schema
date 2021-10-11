@@ -17,7 +17,7 @@ schema = package_files('edxml_schema/schema')
 
 setuptools.setup(
     name="edxml-schema",
-    version="3.0.0.dev2",
+    version="3.0.0.dev3",
     author="Dik Takken",
     author_email="dik.takken@edxml.org",
     description="The RelaxNG schema that is part of the EDXML specification",
