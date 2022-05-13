@@ -1,6 +1,7 @@
-|license| |python package| |php package|
+|mit| |cc| |python package| |php package|
 
-.. |license| image::  https://img.shields.io/badge/License-MIT-blue.svg
+.. |mit| image::  https://img.shields.io/badge/License-MIT-blue.svg
+.. |cc| image::  https://img.shields.io/badge/License-CC%20BY--ND%203.0-lightgrey.svg
 .. |python package| image::    https://github.com/edxml/schema/workflows/Python%20package/badge.svg
 .. |php package| image::    https://github.com/edxml/schema/workflows/PHP%20package/badge.svg
 
@@ -17,3 +18,8 @@ The schema can be used in your projects by cloning this repository. For PHP and 
 
 .. _Python package: python/edxml-schema
 .. _Composer package: php
+
+Licensing
+=========
+
+Both the Python and PHP packages are distributed using the MIT license. The actual RelaxNG schema file, which is included in both packages, uses a Creative Commons license as indicated in the schema itself.
