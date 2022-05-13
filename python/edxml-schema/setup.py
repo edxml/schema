@@ -30,7 +30,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Development Status :: 5 - Production/Stable",
-        "Topic :: Software Development :: Testing",
         "Topic :: Scientific/Engineering :: Artificial Intelligence"
     ],
     package_data={
