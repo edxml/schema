@@ -9,6 +9,16 @@ The EDXML Schema Python Package
 
 This is a Python package that provides the EDXML RelaxNG schema. It can be used to include the schema in Python projects by adding this package as a dependency.
 
+Installing
+==========
+
+The package can be installed using Pip::
+
+  pip install edxml-schema
+
+Usage
+=====
+
 Besides the actual schema the package also provides constants which contain the path to the various versions of the schema. These can be imported like this:
 
 .. code-block:: python
