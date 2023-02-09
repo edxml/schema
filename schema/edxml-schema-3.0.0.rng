@@ -45,17 +45,10 @@
     <element name="event" ns="http://edxml.org/edxml">
       <ref name="foreign-attributes-ns"/>
       <attribute name="event-type">
-        <data type="token">
-          <param name="minLength">1</param>
-          <param name="maxLength">64</param>
-          <param name="pattern">[a-z0-9.-]*</param>
-        </data>
+        <ref name="event-type-name"/>
       </attribute>
       <attribute name="source-uri">
-        <data type="token">
-          <param name="minLength">1</param>
-          <param name="pattern">(/[a-z0-9-]+)*/</param>
-        </data>
+        <ref name="source-uri"/>
       </attribute>
       <optional>
         <attribute name="parents">
@@ -147,11 +140,7 @@
               </choice>
             </attribute>
             <attribute name="name">
-              <data type="token">
-                <param name="minLength">1</param>
-                <param name="maxLength">64</param>
-                <param name="pattern">[a-z0-9.-]*</param>
-              </data>
+              <ref name="object-type-name"/>
             </attribute>
             <attribute name="display-name-singular">
               <data type="token">
@@ -244,11 +233,7 @@
               </data>
             </attribute>
             <attribute name="name">
-              <data type="token">
-                <param name="minLength">1</param>
-                <param name="maxLength">255</param>
-                <param name="pattern">[a-z0-9.-]*</param>
-              </data>
+              <ref name="concept-name"/>
             </attribute>
             <attribute name="display-name-singular">
               <data type="token">
@@ -280,11 +265,7 @@
               </data>
             </attribute>
             <attribute name="name">
-              <data type="token">
-                <param name="minLength">1</param>
-                <param name="maxLength">64</param>
-                <param name="pattern">[a-z0-9.-]*</param>
-              </data>
+              <ref name="event-type-name"/>
             </attribute>
             <attribute name="display-name-singular">
               <data type="token">
@@ -337,15 +318,11 @@
             <optional>
               <element name="parent">
                 <attribute name="event-type">
-                  <data type="token">
-                    <param name="minLength">1</param>
-                    <param name="maxLength">64</param>
-                    <param name="pattern">[a-z0-9.-]*</param>
-                  </data>
+                  <ref name="event-type-name"/>
                 </attribute>
                 <attribute name="property-map">
                   <data type="string">
-                    <param name="pattern">[a-z0-9-]+(.[a-z0-9-]+)*:[a-z0-9-]+(.[a-z0-9-]+)*(,[a-z0-9-]+(.[a-z0-9-]+)*:[a-z0-9-]+(.[a-z0-9-]+)*)*</param>
+                    <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*:[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*(,[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*:[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*)*</param>
                   </data>
                 </attribute>
                 <attribute name="parent-description">
@@ -366,11 +343,7 @@
               <oneOrMore>
                 <element name="property">
                   <attribute name="object-type">
-                    <data type="token">
-                      <param name="minLength">1</param>
-                      <param name="maxLength">64</param>
-                      <param name="pattern">[a-z0-9.-]*</param>
-                    </data>
+                    <ref name="object-type-name"/>
                   </attribute>
                   <attribute name="optional">
                     <choice>
@@ -422,11 +395,7 @@
                   <zeroOrMore>
                     <element name="property-concept">
                       <attribute name="name">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">255</param>
-                          <param name="pattern">[a-z0-9.-]*</param>
-                        </data>
+                        <ref name="concept-name"/>
                       </attribute>
                       <attribute name="confidence">
                         <data type="unsignedByte">
@@ -442,7 +411,7 @@
                           <data type="token">
                             <param name="minLength">1</param>
                             <param name="maxLength">16</param>
-                            <param name="pattern">[a-z0-9.-]*</param>
+                            <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
                           </data>
                         </attribute>
                         <optional>
@@ -477,18 +446,10 @@
                         <ref name="property-name"/>
                       </attribute>
                       <attribute name="source-concept">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">255</param>
-                          <param name="pattern">[a-z0-9.-]*</param>
-                        </data>
+                        <ref name="concept-name"/>
                       </attribute>
                       <attribute name="target-concept">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">255</param>
-                          <param name="pattern">[a-z0-9.-]*</param>
-                        </data>
+                        <ref name="concept-name"/>
                       </attribute>
                       <attribute name="description">
                         <data type="token">
@@ -516,18 +477,10 @@
                         <ref name="property-name"/>
                       </attribute>
                       <attribute name="source-concept">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">255</param>
-                          <param name="pattern">[a-z0-9.-]*</param>
-                        </data>
+                        <ref name="concept-name"/>
                       </attribute>
                       <attribute name="target-concept">
-                        <data type="token">
-                          <param name="minLength">1</param>
-                          <param name="maxLength">255</param>
-                          <param name="pattern">[a-z0-9.-]*</param>
-                        </data>
+                        <ref name="concept-name"/>
                       </attribute>
                       <attribute name="description">
                         <data type="token">
@@ -616,7 +569,7 @@
                       <data type="token">
                         <param name="minLength">1</param>
                         <param name="maxLength">64</param>
-                        <param name="pattern">[a-z0-9-]*</param>
+                        <param name="pattern">[a-z][a-z0-9-]*</param>
                       </data>
                     </attribute>
                     <attribute name="display-name-singular">
@@ -666,10 +619,7 @@
               </data>
             </attribute>
             <attribute name="uri">
-              <data type="token">
-                <param name="minLength">1</param>
-                <param name="pattern">(/[a-z0-9-]+)*/</param>
-              </data>
+              <ref name="source-uri"/>
             </attribute>
             <attribute name="description">
               <data type="normalizedString">
@@ -741,11 +691,38 @@
       </attribute>
     </zeroOrMore>
   </define>
+  <define name="event-type-name">
+    <data type="token">
+      <param name="minLength">1</param>
+      <param name="maxLength">64</param>
+      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+    </data>
+  </define>
   <define name="property-name">
     <data type="token">
       <param name="minLength">1</param>
       <param name="maxLength">64</param>
-      <param name="pattern">[a-z0-9-]+(.[a-z0-9-]+)*</param>
+      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+    </data>
+  </define>
+  <define name="concept-name">
+    <data type="token">
+      <param name="minLength">1</param>
+      <param name="maxLength">255</param>
+      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+    </data>
+  </define>
+  <define name="object-type-name">
+    <data type="token">
+      <param name="minLength">1</param>
+      <param name="maxLength">64</param>
+      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+    </data>
+  </define>
+  <define name="source-uri">
+    <data type="token">
+      <param name="minLength">1</param>
+      <param name="pattern">(/[a-z0-9-]+)*/</param>
     </data>
   </define>
 </grammar>
