@@ -24,7 +24,7 @@
     <element name="edxml" ns="http://edxml.org/edxml">
       <attribute name="version">
         <data type="token">
-          <param name="pattern">3.0.[0-9]+</param>
+          <param name="pattern">3\.0\.[0-9]+</param>
         </data>
       </attribute>
       <zeroOrMore>
@@ -322,7 +322,7 @@
                 </attribute>
                 <attribute name="property-map">
                   <data type="string">
-                    <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*:[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*(,[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*:[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*)*</param>
+                    <param name="pattern">[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*:[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*(,[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*:[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*)*</param>
                   </data>
                 </attribute>
                 <attribute name="parent-description">
@@ -411,7 +411,7 @@
                           <data type="token">
                             <param name="minLength">1</param>
                             <param name="maxLength">16</param>
-                            <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+                            <param name="pattern">[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*</param>
                           </data>
                         </attribute>
                         <optional>
@@ -695,28 +695,28 @@
     <data type="token">
       <param name="minLength">1</param>
       <param name="maxLength">64</param>
-      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+      <param name="pattern">[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*</param>
     </data>
   </define>
   <define name="property-name">
     <data type="token">
       <param name="minLength">1</param>
       <param name="maxLength">64</param>
-      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+      <param name="pattern">[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*</param>
     </data>
   </define>
   <define name="concept-name">
     <data type="token">
       <param name="minLength">1</param>
       <param name="maxLength">255</param>
-      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+      <param name="pattern">[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*</param>
     </data>
   </define>
   <define name="object-type-name">
     <data type="token">
       <param name="minLength">1</param>
       <param name="maxLength">64</param>
-      <param name="pattern">[a-z][a-z0-9-]*(.[a-z][a-z0-9-]*)*</param>
+      <param name="pattern">[a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)*</param>
     </data>
   </define>
   <define name="source-uri">
